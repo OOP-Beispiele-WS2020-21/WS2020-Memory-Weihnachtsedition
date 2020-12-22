@@ -19,6 +19,7 @@ public interface GameConfig {
     int WINDOW_WIDTH = 700;
     int WINDOW_HEIGHT = 700;
     Color BACKGROUND_COLOR = LINEN;
+    Color MENU_BACKGROUND_COLOR = FLACESCENT;
     // *******************************************************************************
     // ****************************** Background Music *******************************
     // *******************************************************************************
@@ -32,6 +33,7 @@ public interface GameConfig {
     int LABEL_FONT_SIZE = 16;
     Color BOTTOM_BAR_COLOR = FIRE_OPAL;
     Color LABEL_FONT_COLOR = new Color(250, 250, 250);
+    Color LABEL_FONT_COLOR_FOR_MENU = new Color(30, 30, 30);
     String LABEL_FONT_NAME = "Lucida Sans Typewriter";
     // *******************************************************************************
     // *********************** Configuration for Board Element ***********************
