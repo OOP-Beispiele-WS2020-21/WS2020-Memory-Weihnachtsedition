@@ -1,30 +1,22 @@
 package ui;
 
-import de.ur.mi.oop.colors.Color;
+public class UIElement implements InputEventTarget {
 
-public class UIElement {
+    public void update() {
 
-    private final int xPosition;
-    private final int yPosition;
-
-    public UIElement(int x, int y, int width, int height, Color backgroundColor) {
-        this.xPosition = x;
-        this.yPosition = y;
-    }
-
-    public int getXPosition() {
-        return xPosition;
-    }
-
-    public int getYPosition() {
-        return yPosition;
     }
 
     public void draw() {
+
     }
 
+    @Override
     public void handleMouseClick(int x, int y) {
 
     }
 
+    @Override
+    public void handleKeyPressed(int keyCode) {
+
+    }
 }

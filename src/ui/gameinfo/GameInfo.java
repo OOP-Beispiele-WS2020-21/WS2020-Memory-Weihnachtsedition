@@ -1,4 +1,4 @@
-package ui.bottomBar;
+package ui.gameinfo;
 
 import config.GameConfig;
 import de.ur.mi.oop.colors.Color;
@@ -6,7 +6,7 @@ import de.ur.mi.oop.graphics.Label;
 import de.ur.mi.oop.graphics.Rectangle;
 import ui.UIElement;
 
-public class BottomBar extends UIElement implements GameConfig {
+public class GameInfo extends UIElement implements GameConfig {
 
     private static final String CONTROLS_HELP_TEXT = "[M]: Musik an- und ausschalten | [N]: Spiel neustarten";
     private static final String REVEALED_PAIRS_PREFIX = "Aufgedeckte Paare: ";
@@ -14,8 +14,7 @@ public class BottomBar extends UIElement implements GameConfig {
     private Label revealedPairsTextView;
     private Rectangle background;
 
-    public BottomBar(int x, int y, int width, int height, Color backgroundColor) {
-        super(x, y, width, height, backgroundColor);
+    public GameInfo(int x, int y, int width, int height, Color backgroundColor) {
         initTextViews(x, y);
         background = new Rectangle(x, y, width, height, backgroundColor);
     }
@@ -40,10 +39,22 @@ public class BottomBar extends UIElement implements GameConfig {
     }
 
     @Override
+    public void update() {
+
+    }
+
+    @Override
     public void draw() {
-        super.draw();
         background.draw();
         controlsTextView.draw();
         revealedPairsTextView.draw();
+    }
+
+    @Override
+    public void handleMouseClick(int x, int y) {
+    }
+
+    @Override
+    public void handleKeyPressed(int keyCode) {
     }
 }

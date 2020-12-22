@@ -1,7 +1,6 @@
 package ui.board;
 
 import config.GameConfig;
-import de.ur.mi.oop.colors.Color;
 import game.Card;
 import ui.UIElement;
 
@@ -13,18 +12,22 @@ public class Board extends UIElement implements GameConfig, CardViewListener {
     private ArrayList<CardView> revealedCardViews;
     private BoardListener listener;
 
-    public Board(int x, int y, int width, int height, Color backgroundColor, BoardListener listener) {
-        super(x, y, width, height, backgroundColor);
+    private int x;
+    private int y;
+
+    public Board(int x, int y, BoardListener listener) {
+        this.x = x;
+        this.y = y;
+        this.listener = listener;
         cardViews = new ArrayList<>();
         revealedCardViews = new ArrayList<>();
-        this.listener = listener;
     }
 
     public void setCards(ArrayList<Card> cards) {
         cardViews.clear();
         revealedCardViews.clear();
-        int startX = getXPosition() + BOARD_PADDING + CARD_VIEW_MARGIN / 2;
-        int startY = getYPosition() + BOARD_PADDING;
+        int startX = x + BOARD_PADDING + CARD_VIEW_MARGIN / 2;
+        int startY = y + BOARD_PADDING;
         int cardsPerRowAndColumn = (int) Math.sqrt(cards.size());
         for (int x = 0; x < cardsPerRowAndColumn; x++) {
             for (int y = 0; y < cardsPerRowAndColumn; y++) {
@@ -71,6 +74,18 @@ public class Board extends UIElement implements GameConfig, CardViewListener {
     }
 
     @Override
+    public void update() {
+
+    }
+
+    @Override
+    public void draw() {
+        for (CardView cardView : cardViews) {
+            cardView.draw();
+        }
+    }
+
+    @Override
     public void handleMouseClick(int x, int y) {
         for (CardView cardView : cardViews) {
             cardView.handleMouseClick(x, y);
@@ -78,11 +93,8 @@ public class Board extends UIElement implements GameConfig, CardViewListener {
     }
 
     @Override
-    public void draw() {
-        super.draw();
-        for (CardView cardView : cardViews) {
-            cardView.draw();
-        }
+    public void handleKeyPressed(int keyCode) {
+
     }
 
     @Override
