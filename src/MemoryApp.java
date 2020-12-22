@@ -35,6 +35,12 @@ public class MemoryApp extends GraphicsApp implements GameConfig, StartSceneList
     }
 
     @Override
+    public void onMenuClosed() {
+        currentScene = gameScene;
+        currentScene.start();
+    }
+
+    @Override
     public void onMousePressed(MousePressedEvent event) {
         currentScene.handleMouseClick(event.getXPos(), event.getYPos());
     }
@@ -46,11 +52,5 @@ public class MemoryApp extends GraphicsApp implements GameConfig, StartSceneList
 
     public static void main(String[] args) {
         GraphicsAppLauncher.launch();
-    }
-
-    @Override
-    public void onMenuClosed() {
-        currentScene = gameScene;
-        currentScene.start();
     }
 }
