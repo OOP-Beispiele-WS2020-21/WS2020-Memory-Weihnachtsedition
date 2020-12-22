@@ -27,20 +27,20 @@ public class GameScene extends BaseScene implements BoardListener {
     }
 
     private void initMusic() {
-        cheerClip = new AudioClip(PATH_TO_CHEER_CLIP);
-        backgroundMusic = new AudioClip(PATH_TO_BACKGROUND_MUSIC);
+        cheerClip = new AudioClip(GameConfig.PATH_TO_CHEER_CLIP);
+        backgroundMusic = new AudioClip(GameConfig.PATH_TO_BACKGROUND_MUSIC);
         backgroundMusicIsPlaying = false;
     }
 
     private void initUI() {
         board = new Board(GameConfig.BOARD_X_MARGIN, 0, this);
-        bottomBar = new GameInfo(0, WINDOW_HEIGHT - BOTTOM_BAR_HEIGHT, WINDOW_WIDTH, BOARD_HEIGHT, BOTTOM_BAR_COLOR);
+        bottomBar = new GameInfo(0, GameConfig.WINDOW_HEIGHT - GameConfig.BOTTOM_BAR_HEIGHT, GameConfig.WINDOW_WIDTH, GameConfig.BOARD_HEIGHT, GameConfig.BOTTOM_BAR_COLOR);
         addElement(board);
         addElement(bottomBar);
     }
 
     private void initGame() {
-        ArrayList<Card> stack = Card.createStack(DEFAULT_NUMBER_OF_PAIRS);
+        ArrayList<Card> stack = Card.createStack(GameConfig.DEFAULT_NUMBER_OF_PAIRS);
         Collections.shuffle(stack);
         board.setCards(stack);
         bottomBar.setCounter(0, stack.size() / 2);

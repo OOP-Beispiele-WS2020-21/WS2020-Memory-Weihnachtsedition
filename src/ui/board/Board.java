@@ -6,7 +6,7 @@ import ui.UIElement;
 
 import java.util.ArrayList;
 
-public class Board extends UIElement implements GameConfig, CardViewListener {
+public class Board extends UIElement implements CardViewListener {
 
     private ArrayList<CardView> cardViews;
     private ArrayList<CardView> revealedCardViews;
@@ -26,15 +26,15 @@ public class Board extends UIElement implements GameConfig, CardViewListener {
     public void setCards(ArrayList<Card> cards) {
         cardViews.clear();
         revealedCardViews.clear();
-        int startX = x + BOARD_PADDING + CARD_VIEW_MARGIN / 2;
-        int startY = y + BOARD_PADDING;
+        int startX = x + GameConfig.BOARD_PADDING + GameConfig.CARD_VIEW_MARGIN / 2;
+        int startY = y + GameConfig.BOARD_PADDING;
         int cardsPerRowAndColumn = (int) Math.sqrt(cards.size());
         for (int x = 0; x < cardsPerRowAndColumn; x++) {
             for (int y = 0; y < cardsPerRowAndColumn; y++) {
                 int currentStackPosition = (x * cardsPerRowAndColumn) + y;
                 Card currentCard = cards.get(currentStackPosition);
-                int cardXPosition = startX + (x * (CARD_VIEW_SIZE + CARD_VIEW_MARGIN));
-                int cardYPosition = startY + (y * (CARD_VIEW_SIZE + CARD_VIEW_MARGIN));
+                int cardXPosition = startX + (x * (GameConfig.CARD_VIEW_SIZE + GameConfig.CARD_VIEW_MARGIN));
+                int cardYPosition = startY + (y * (GameConfig.CARD_VIEW_SIZE + GameConfig.CARD_VIEW_MARGIN));
                 CardView cardView = new CardView(cardXPosition, cardYPosition, currentCard, this);
                 cardViews.add(cardView);
             }

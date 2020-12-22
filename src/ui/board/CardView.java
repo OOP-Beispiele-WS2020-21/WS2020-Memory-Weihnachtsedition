@@ -5,7 +5,7 @@ import de.ur.mi.oop.graphics.Image;
 import de.ur.mi.oop.graphics.Rectangle;
 import game.Card;
 
-public class CardView implements GameConfig {
+public class CardView {
 
     private Card card;
     private Rectangle cardBackground;
@@ -20,15 +20,15 @@ public class CardView implements GameConfig {
     }
 
     private Rectangle createCardBackground(int x, int y) {
-        Rectangle rect = new Rectangle(x, y, CARD_VIEW_SIZE, CARD_VIEW_SIZE, CARD_BACKGROUND_COLOR);
-        rect.setBorderColor(CARD_BORDER_COLOR);
-        rect.setBorderWeight(CARD_BORDER_WEIGHT);
+        Rectangle rect = new Rectangle(x, y, GameConfig.CARD_VIEW_SIZE, GameConfig.CARD_VIEW_SIZE, GameConfig.CARD_BACKGROUND_COLOR);
+        rect.setBorderColor(GameConfig.CARD_BORDER_COLOR);
+        rect.setBorderWeight(GameConfig.CARD_BORDER_WEIGHT);
         return rect;
     }
 
     private Image createCardImage(int x, int y) {
-        int imageXPosition = x + CARD_VIEW_SIZE/2 - CARD_IMAGE_SIZE/2;
-        int imageYPosition = y + CARD_VIEW_SIZE/2 - CARD_IMAGE_SIZE/2;
+        int imageXPosition = x + GameConfig.CARD_VIEW_SIZE/2 - GameConfig.CARD_IMAGE_SIZE/2;
+        int imageYPosition = y + GameConfig.CARD_VIEW_SIZE/2 - GameConfig.CARD_IMAGE_SIZE/2;
         return new Image(imageXPosition, imageYPosition, card.getImagePath());
     }
 
@@ -38,16 +38,16 @@ public class CardView implements GameConfig {
         }
         card.toggle();
         if(card.isRevealed()) {
-            cardBackground.setColor(CARD_FOREGROUND_COLOR);
+            cardBackground.setColor(GameConfig.CARD_FOREGROUND_COLOR);
             listener.onCardViewRevealed(this);
         } else {
-            cardBackground.setColor(CARD_BACKGROUND_COLOR);
+            cardBackground.setColor(GameConfig.CARD_BACKGROUND_COLOR);
         }
     }
 
     public void clear() {
         card.clear();
-        cardBackground.setColor(CARD_CLEARED_COLOR);
+        cardBackground.setColor(GameConfig.CARD_CLEARED_COLOR);
     }
 
     public int getPairID() {

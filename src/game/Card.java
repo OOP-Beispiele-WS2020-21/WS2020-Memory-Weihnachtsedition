@@ -5,7 +5,7 @@ import config.GameConfig;
 import java.io.File;
 import java.util.ArrayList;
 
-public class Card implements GameConfig {
+public class Card {
 
     private final int pairID;
     private final String imagePath;
@@ -57,7 +57,7 @@ public class Card implements GameConfig {
     }
 
     private static String[] getImagePaths() {
-        File[] files = new File(PATH_TO_IMAGE_FILES).listFiles();
+        File[] files = new File(GameConfig.PATH_TO_IMAGE_FILES).listFiles();
         String[] imagePaths = new String[files.length];
         for(int i = 0; i < files.length; i++) {
             imagePaths[i] = files[i].getAbsolutePath();

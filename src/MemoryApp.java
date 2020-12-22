@@ -8,7 +8,7 @@ import ui.scenes.GameScene;
 import ui.scenes.StartScene;
 import ui.scenes.StartSceneListener;
 
-public class MemoryApp extends GraphicsApp implements GameConfig, StartSceneListener {
+public class MemoryApp extends GraphicsApp implements StartSceneListener {
 
 
     private GameScene gameScene;
@@ -17,8 +17,8 @@ public class MemoryApp extends GraphicsApp implements GameConfig, StartSceneList
 
     @Override
     public void initialize() {
-        setFrameRate(30);
-        setCanvasSize(WINDOW_WIDTH, WINDOW_HEIGHT);
+        setFrameRate(GameConfig.FRAME_RATE);
+        setCanvasSize(GameConfig.WINDOW_WIDTH, GameConfig.WINDOW_HEIGHT);
         initScenes();
     }
 

@@ -1,12 +1,11 @@
 package ui.scenes;
 
-import config.GameConfig;
 import ui.InputEventTarget;
 import ui.UIElement;
 
 import java.util.ArrayList;
 
-public class BaseScene implements GameConfig, InputEventTarget {
+public class BaseScene implements InputEventTarget {
 
     private ArrayList<UIElement> elements;
 
