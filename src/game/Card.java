@@ -23,6 +23,10 @@ public class Card implements GameConfig {
         return pairID;
     }
 
+    public String getImagePath() {
+        return imagePath;
+    }
+
     public boolean isRevealed() {
         return isRevealed;
     }
@@ -40,10 +44,6 @@ public class Card implements GameConfig {
 
     public void clear() {
         isCleared = true;
-    }
-
-    public String getImagePath() {
-        return imagePath;
     }
 
     public static ArrayList<Card> createStack(int numberOfPairs) {
