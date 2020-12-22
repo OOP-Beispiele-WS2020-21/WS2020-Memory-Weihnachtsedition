@@ -1,4 +1,4 @@
-package ui.board;
+package ui.scenes.gamescene.board;
 
 import config.GameConfig;
 import de.ur.mi.oop.graphics.Image;

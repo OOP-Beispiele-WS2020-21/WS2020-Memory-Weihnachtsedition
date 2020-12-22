@@ -1,12 +1,13 @@
-package ui.scenes;
+package ui.scenes.gamescene;
 
 import config.GameConfig;
 import de.ur.mi.oop.audio.AudioClip;
 import de.ur.mi.oop.events.KeyPressedEvent;
 import game.Card;
-import ui.board.Board;
-import ui.board.BoardListener;
-import ui.gameinfo.GameInfo;
+import ui.scenes.BaseScene;
+import ui.scenes.gamescene.board.Board;
+import ui.scenes.gamescene.board.BoardListener;
+import ui.scenes.gamescene.gameinfo.GameInfo;
 
 import java.util.ArrayList;
 import java.util.Collections;

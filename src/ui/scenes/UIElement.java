@@ -1,4 +1,6 @@
-package ui;
+package ui.scenes;
+
+import ui.scenes.InputEventTarget;
 
 public class UIElement implements InputEventTarget {
 

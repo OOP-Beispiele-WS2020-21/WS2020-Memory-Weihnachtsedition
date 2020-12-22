@@ -1,9 +1,10 @@
-package ui.scenes;
+package ui.scenes.startscene;
 
 import config.GameConfig;
 import de.ur.mi.oop.events.KeyPressedEvent;
 import de.ur.mi.oop.graphics.Label;
 import de.ur.mi.oop.graphics.Rectangle;
+import ui.scenes.BaseScene;
 
 public class StartScene extends BaseScene {
 

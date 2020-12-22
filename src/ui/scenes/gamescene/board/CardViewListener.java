@@ -1,4 +1,4 @@
-package ui.board;
+package ui.scenes.gamescene.board;
 
 public interface CardViewListener {
 

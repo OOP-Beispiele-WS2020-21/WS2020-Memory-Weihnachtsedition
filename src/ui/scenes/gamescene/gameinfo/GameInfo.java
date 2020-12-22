@@ -1,10 +1,10 @@
-package ui.gameinfo;
+package ui.scenes.gamescene.gameinfo;
 
 import config.GameConfig;
 import de.ur.mi.oop.colors.Color;
 import de.ur.mi.oop.graphics.Label;
 import de.ur.mi.oop.graphics.Rectangle;
-import ui.UIElement;
+import ui.scenes.UIElement;
 
 public class GameInfo extends UIElement {
 

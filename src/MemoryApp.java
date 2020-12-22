@@ -4,9 +4,9 @@ import de.ur.mi.oop.events.KeyPressedEvent;
 import de.ur.mi.oop.events.MousePressedEvent;
 import de.ur.mi.oop.launcher.GraphicsAppLauncher;
 import ui.scenes.BaseScene;
-import ui.scenes.GameScene;
-import ui.scenes.StartScene;
-import ui.scenes.StartSceneListener;
+import ui.scenes.gamescene.GameScene;
+import ui.scenes.startscene.StartScene;
+import ui.scenes.startscene.StartSceneListener;
 
 public class MemoryApp extends GraphicsApp implements StartSceneListener {
 

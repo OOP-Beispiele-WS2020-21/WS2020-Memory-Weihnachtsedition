@@ -1,8 +1,8 @@
-package ui.board;
+package ui.scenes.gamescene.board;
 
 import config.GameConfig;
 import game.Card;
-import ui.UIElement;
+import ui.scenes.UIElement;
 
 import java.util.ArrayList;
 

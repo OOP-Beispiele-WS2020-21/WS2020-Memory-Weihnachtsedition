@@ -1,8 +1,5 @@
 package ui.scenes;
 
-import ui.InputEventTarget;
-import ui.UIElement;
-
 import java.util.ArrayList;
 
 public class BaseScene implements InputEventTarget {
